@@ -527,7 +527,6 @@ extension HomeViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         bannerCell.setData(banners[indexPath.row])
-        Analytics.logEvent(Tracking.Event.touchBanner + banners[indexPath.row].text.replacingOccurrences(of: " ", with: "_"), parameters: nil)
         return bannerCell
     }
     
