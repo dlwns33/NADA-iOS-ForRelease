@@ -533,6 +533,7 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         openURL(link: URL(string: banners[indexPath.row].url)!)
+        Analytics.logEvent(Tracking.Event.touchBanner + "배너\(indexPath.row+1)", parameters: nil)
     }
 }
 
